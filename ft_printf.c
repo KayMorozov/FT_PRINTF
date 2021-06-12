@@ -32,6 +32,8 @@ int	ft_printf(const char *input, ...)
 	int		char_count;
 
 	input_string = ft_strdup(input);
+	if (!input_string)
+		return (-1);
 	va_start(args, input);
 	char_count = print_result(input_string, args);
 	va_end(args);
